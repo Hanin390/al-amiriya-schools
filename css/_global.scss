@@ -1,0 +1,68 @@
+//global css
+@import'variable';
+
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:jF;
+    src: url(../font/JF-Flat-Regular.ttf);
+}
+@font-face {
+    font-family: GESSTV;
+    src: url("../font/GE-SS-TV-Bold.ttf");
+}
+
+html,
+body{
+    font-family: 'jF';
+}
+
+ul,
+ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+.btn-website{
+    display: inline-block;
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    color: $color;
+    padding: 6px 30px;
+    font-size: 18px;
+    font-family:"jF";
+    border-radius: 50px;
+    transition: $transition;
+    &:hover{
+        background-color: transparent;
+        color: $mainColor;
+        box-shadow: 0 0 6px 1px rgba($color: $mainColor, $alpha: 0.1);
+        transform: translateY(-5px);
+    }
+
+}
+.sec-title{
+    text-align: center;
+    margin-bottom: 54px;
+    h3{
+        color: $color;
+    }
+    h6{
+        color: $seconderyColor;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}

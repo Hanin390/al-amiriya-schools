@@ -1,0 +1,561 @@
+@import'variable';
+//services css
+.services{
+    padding: $paddingSection;
+    .all{
+        display: flex;
+        flex-wrap: wrap;
+        .box{
+            width: calc(100% / 4);
+            padding:54px 53px;
+            transition: $transition;
+            &:hover{
+                box-shadow: 0 0 6px 1px rgba(0 , 0 ,0 , 0.3);
+                transform: scale(1.03);
+            }
+            @media(min-width: 320px) and (max-width: 767px){
+                width: 100%;
+            }
+            @media(min-width: 768px) and (max-width: 991px){
+                width: calc(100% / 2);
+            }
+
+            &:nth-child(1){
+                background-color:#2d98a2;
+            }
+            &:nth-child(2){
+                background-color:#4fc5ba;
+            }
+            &:nth-child(3){
+                background-color:#eb774c;
+            }
+            &:nth-child(4){
+                background-color:#edbf47;
+            }
+            img{
+                display: inline-block;
+                margin-bottom: 31px;
+            }
+            h3{
+                color: #fff;
+                margin-bottom: 28px;
+            }
+            p{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------
+
+// Last news CSS
+.last-news{
+    padding: $paddingSection;
+    background-color: #fafafa;
+    .all{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+    .box{
+        width: calc((100% / 3) - 20px);
+        box-shadow: 0 0 6px 1px rgba(0 , 0 ,0 , 0.3);
+        position: relative;
+        @media(min-width: 320px) and (max-width: 991px){
+            width: 100%;
+        }
+        .c{
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            color: $color;
+            background-color: rgba($color: $mainColor, $alpha: 0.7);
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+        .bg-img{
+            background-size: cover !important;
+            height: 222px;
+        }
+        .content{
+            background-color: #fff;
+            padding: 20px;
+            i{
+                color: $seconderyColor;
+            }
+            span{
+                display: inline-block;
+                margin-bottom: 5px;
+                color: #737373;
+            }
+            h3{
+                color: $color;
+                margin-bottom: 10px;
+                @media(min-width: 992px) and (max-width: 1199px){
+                    font-size: 17px;
+                }
+            }
+            p{
+                color: $color;
+                margin-bottom: 10px;
+                @media(min-width: 992px) and (max-width: 1199px){
+                    font-size: 14px;
+                }
+            }
+            .btn-website{
+                &:hover{
+                    background-color: $color;
+                    border: 1px solid $color;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------
+
+// Goals CSS
+.goals-sec{
+    background: url(../image/goals/bg.png) no-repeat;
+    background-size: cover;
+    height: auto;
+    position: relative;
+    .overlay{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba($color: $seconderyColor, $alpha: 83%);
+        padding: 54px 0px;
+    }
+.sec-title{
+    margin-bottom: 105px;
+    h3,
+    h6{
+        color: #fff;
+    }
+}
+.all{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    .box{
+        width: calc((100% / 4) - 30px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+    }
+    .content{
+            h1{
+                color: #fff;
+            } 
+            p{
+                color: $color;
+            }
+        }
+    }
+}
+
+// responsive goals 
+@media (min-width: 320px) and (max-width: 767px) {
+    .box{
+        width: 100%;
+    }
+    .goals-sec {
+        height: auto;
+
+        .overlay {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        .sec-title {
+            margin-bottom: 50px;
+        }
+
+        .all {
+            flex-direction: column;
+            gap: 40px;
+
+            .box {
+                width: 100%;
+                gap: 20px;
+            }
+        }
+    }
+
+}
+
+// ----------------------------------------------------------
+
+// Testimonials css
+.Testimonials{
+    padding: $paddingSection;
+    .all{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        .box{
+            width: calc((100% /2) - 40px);
+            display: flex;
+            gap: 20px;
+            @media (min-width: 320px) and (max-width: 991px){
+                width: 100%;
+                flex-direction: column;
+            }
+
+            img{
+                width: 72px;
+                height: 72px;
+            }
+            .content{
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                padding: 15px;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    display: inline-block;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color:transparent transparent transparent #f9f9f9;
+                    top: 25px;
+                    right: -18px;
+                }
+            }
+            h3{
+                color: #3e3e3e;
+                margin-bottom: 10px;
+            }
+            p{
+                color: $color;
+                margin-bottom: 10px;
+            }
+            ul{
+                display: flex;
+                gap: 30px;
+                color: $color;
+                li{
+                    a{
+                        color: $color;
+                    }
+                    i{
+                        width: 15px;
+                        height: 13px;
+                        color: $seconderyColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------
+
+// contact css
+.contact{
+    background-color: #eef6f6;
+    padding: 88px 0;
+    .all{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        .image{
+            width: 580px;
+            height: 334px;
+        }
+        .contact-info{
+            width: 270px;
+            height: 334px;
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: #505050;
+            border-radius: 15px;
+            h3{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            h4{
+                i{
+                    color: $seconderyColor;
+                }
+            }
+            p{
+                i{
+                    color: $seconderyColor;
+                }
+            }
+        }
+        .working-time{
+            width: 270px;
+            height: 334px;
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #505050;
+            border-radius: 15px;
+
+            h3{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 14px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .day{
+                background-color: $mainColor;
+                padding: 5px ;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                }
+                span{
+                    margin-bottom: 10px;
+                    span{
+                        color: $seconderyColor;
+                    }
+                }
+            }
+        }
+}
+// start responsive contact
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .contact {
+        padding: 50px 0;
+
+        .all {
+            flex-direction: column;
+            gap: 20px;
+            
+            .image {
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .contact-info {
+                width: 100%;
+                height: auto;
+                min-height: 334px;
+            }
+
+            .working-time {
+                width: 100%;
+                height: auto;
+                min-height: 334px;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------
+
+// location css
+.location{
+    .bg-img{
+        height: 358px;
+        background-size: cover !important;
+        position: relative;
+        .email-form {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            form {
+                width: 400px;
+                height: 82px;
+                display: flex;
+                gap: 15px;
+                background-color: rgba($color: $seconderyColor, $alpha: 83%);
+                padding: 20px;
+                border-radius: 10px;
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    display: inline-block;
+                    border-width: 20px;
+                    border-style: solid;
+                    border-color:rgba($color: $seconderyColor, $alpha: 83%) transparent transparent transparent;
+                    top: 81px;
+                    right: 169px;
+                }
+            input {
+                width: 340px;
+                height: 100%;
+                padding: 0 15px;
+                border: none;
+                border-radius: 5px;
+                &::placeholder{
+                    font-family: 'jF';
+                    color: #8e8e8e;
+                }
+            }
+            button {
+                width: 60px;
+                height: 100%;
+                background-color: #797979;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                transition: 0.1s;
+                &:active{
+                    background-color: $seconderyColor;
+                    border: 4px solid #797979;
+                    transform: translateY(4px);
+                }
+            }
+        }
+    }   
+    }
+    &::before{
+        content: "";
+        width: 100%;
+        height: 358px;
+        background-color: black;
+        position: absolute;
+        }
+    
+}
+// responsive location
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .location {
+    &::before {
+        height: 300px;
+    }
+        .bg-img {
+            height: 300px;
+
+            .email-form {
+                form {
+                    width: 90%;
+                    box-sizing: border-box;
+                    height: 75px;
+                    padding: 15px;
+                    gap: 10px;
+
+                    &::before {
+                        right: calc(50% - 20px);
+                    }
+
+                    input {
+                        width: auto;
+                        flex: 1;
+                        min-width: 0;
+                    }
+
+                    button {
+                        width: 60px;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .location {
+        .bg-img {
+            .email-form {
+                form {
+                    width: 400px;
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------------------------
+
+
+// footer css
+footer{
+    padding: $paddingSection;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        color: #656565;
+        font-family: 'GESSTV';
+        margin-bottom: 20px;
+    }
+    p{
+        width: 750px;
+        color: #555555;
+        margin-bottom: 20px;
+    }
+    .icon{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        i{
+            width: 40px;
+            height: 40px;
+            border: 2px solid #797979;
+            border-radius: 50%;
+            color: #797979;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+            color: $seconderyColor;
+        }
+        }
+        
+    }
+
+}
+// responsive footer
+
+@media (min-width: 320px) and (max-width: 767px) {
+    footer {
+        padding: 50px 15px;
+
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+        .icon {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    footer {
+        p {
+            width: 90%;
+            text-align: center;
+        }
+    }
+}

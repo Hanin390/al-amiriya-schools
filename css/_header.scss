@@ -1,0 +1,154 @@
+@import'variable';
+//navbar css
+//start navbar
+.navbar{
+    background-color: $seconderyColor;
+    height: 92px;
+    position: relative;
+    z-index: 1000;
+    .all{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 92px;
+        .logo{
+            img{
+            width: 231px;
+            height: 60px;
+            }
+        }
+        .menu-btn {
+            display: none;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:40px;
+
+        li{
+            &:hover{
+                a{
+                    color: $mainColor;
+                }
+            }
+            &.active{
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+                padding: 6px 25px;
+                border-radius: 10px;
+                
+                a{
+                    color: #505050;
+                }
+            }
+            a{
+                color: #fff;
+                font-size: 15px;
+                transition: $transition;
+            }
+        }
+    }
+    
+}
+//end navbar
+// Responsive Navabar
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .navbar {
+        height: auto;
+        .all {
+            height: 92px;
+            .menu-btn {
+                display: block;
+                background-color: transparent;
+                border: none;
+                font-size: 25px;
+                color: #fff;
+            }
+            ul {
+                position: absolute;
+                top: 92px;
+                right: 0;
+                width: 60%;
+                background-color: $seconderyColor;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                padding: 10px 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateX(40%);
+                transition: 0.5s ease;
+                li {
+                    width: 100%;
+                    text-align: center;
+                    padding: 12px 0;
+                    &.active {
+                        width: auto;
+                        margin: 5px 20px;
+                    }
+                }
+            }
+            ul.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+        }
+    }
+
+}
+
+//----------------------
+
+// header css
+//start header
+.main-header{
+    height: 631px;
+    background-size: cover !important;
+    padding: 100px 0 ;
+    
+    .content{
+        h1{
+            font-family: jF;
+            font-size:51PX;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        P{
+            width: 392px;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+//end header
+// responsive header 
+@media (min-width: 320px) and (max-width: 767px) {
+    .main-header {
+        height: 500px;
+        padding: 80px 0;
+        background-position: center !important;
+        .content {
+            h1 {
+                font-size: 35px;
+            }
+
+            p {
+                width: 100%;
+                font-size: 16px;
+                text-align: justify;
+            }
+
+            .btn-website {
+                font-size: 16px;
+                padding: 6px 20px;
+            }
+        }
+    }
+}
